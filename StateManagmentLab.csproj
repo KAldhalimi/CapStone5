@@ -175,8 +175,8 @@
     <Content Include="Views\Home\WelcomeUser.cshtml" />
     <Content Include="Views\Home\UserDetails.cshtml" />
     <Content Include="Views\Home\Print.cshtml" />
-    <Content Include="Views\Home\ListItems.cshtml" />
     <Content Include="Views\Home\Cart.cshtml" />
+    <Content Include="Views\Home\Itemlist.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

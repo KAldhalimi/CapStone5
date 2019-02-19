@@ -1,4 +1,4 @@
-﻿@{ViewBag.Title = "UserDetails";}
+﻿@{ViewBag.Title = "Cart";}
 
 <div class="RegBox">
     <div class="CenterRegBox">
@@ -8,7 +8,7 @@
 
             <h2>Here's your current cart, @ViewBag.CurrentUser.UserName!</h2>
 
-            <h2>List Items</h2>
+            <h2>Cart</h2>
 
             <table class="table">
                 <tr>
@@ -16,7 +16,7 @@
                     <th>Price</th>
                     <th></th>
                 </tr>
-                @if (ViewBag.ItemsList == null)
+                @if (ViewBag.ShoppingCart == null)
                 {
                     <tr>
                         <td>Your Cart</td>
@@ -25,7 +25,7 @@
                 }
                 else
                 {
-                    foreach (var item in ViewBag.ItemsList)
+                    foreach (var item in ViewBag.ShoppingCart)
                     {
                         <tr>
                             <td>@item.ItemName</td>

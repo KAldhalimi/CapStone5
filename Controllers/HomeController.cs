@@ -104,7 +104,7 @@ namespace StateManagmentLab.Controllers
             }
 
             Session["ShoppingCart"] = ShoppingCart;
-            return RedirectToAction("ListItems");
+            return RedirectToAction("Itemlist");
         }
             public ActionResult WelcomeUser(Registration u)
         {
@@ -124,6 +124,16 @@ namespace StateManagmentLab.Controllers
 
             return View();
 
+
+        }
+
+        public ActionResult Cart(Registration newUser)
+        {
+            ShoppingCart = (List<item>)Session["ShoppingCart"];
+
+            ViewBag.ShoppingCart = ShoppingCart;
+            ViewBag.CurrentUser = (Registration)Session["CurrentUser"];
+            return View();
 
         }
 
